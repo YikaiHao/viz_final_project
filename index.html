@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>viz_project</title>
+	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Paytone+One&display=swap" rel="stylesheet" />
+	<link href="./styles/dashboard.css" rel="stylesheet" />
+	<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+	<script src="./scripts/airbnb.js"></script>
+</head>
+
+<body>
+	<div id="top">
+		<div class='title'id="logo_title">
+			<img id="logo" src='./data/logo.png' alt="logo">
+		</div>
+	
+		<fieldset id="searchBar">
+			<div id="searchItem">
+				<div>
+					<label id="searchTitle">Superhost</label>
+				</div>
+				<div>
+					<select id="superhost" onchange="getInput('superhost')">
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+					</select>
+				</div>
+				
+			</div>
+			<div id="searchItem">
+				<label id="searchTitle">Room Type</label>
+				<select id="roomType" onchange="getInput('roomType')">
+					<option value="Entire Home/Apt">Entire Home/Apt</option>
+					<option value="Private Room">Private Room</option>
+				</select>
+			</div>
+			<div id="searchItem">
+				<label id="searchTitle">Borough</label>
+				<select id="borough" onchange="getInput('borough')">
+					<option value="Brooklyn">Brooklyn</option>
+					<option value="Manhattan">Manhattan</option>
+					<option value="Queens">Queens</option>
+					<option value="Bronx">Bronx</option>
+					<option value="Staten Island">Staten Island</option>
+				</select>
+			</div>
+			<div id="searchItem">
+				<div>
+					<label id="searchTitle">Capacity</label>
+				</div>
+				<div>
+					<input id = "capacity" type="number" value="2" min="1" max="10" oninput="getInput('cap')">
+				</div>
+			</div>
+			<div id="searchItem">
+				<div>
+					<label id="searchTitle">Bathrooms</label>
+				</div>
+				<div>
+					<input id = "bathroom" type="number" value="1.0" min="1" max="4" step="0.5" oninput="getInput('bathroom')">	
+				</div>
+			</div>
+			<div id="searchItem">
+				<div>
+					<label id="searchTitle">Bedrooms</label>
+				</div>
+				<div>
+					<input id = "bedroom" type="number" value="2" min="1" max="6" oninput="getInput('bedroom')">
+				</div>
+			</div>	
+			<div id="searchItem">
+				<button type="button" id="check" class="button-success pure-button" onclick="searchResult()">Search</button>
+			</div>
+		</fieldset>
+	</div>
+	<hr>
+	<div id="plots">
+		<div id="nyMap"></div>
+		<div id="searchPlot">
+			<div id="dashboard">
+				<div id="priceDashboard">
+					<h3 id="dbText">Avg. Price</h3>
+					<output id="avgPirce">$178.95</output>
+				</div>
+				<div id="scoreDashboard">
+					<h3 id="dbText">Avg. Review Score</h3>
+					<output id="avgScore">4.85</output>
+				</div>
+			</div>
+			<div id="scatterplot"></div>
+		</div>
+	</div>
+	<hr>
+    <div id="searchHistory">
+        <table>  
+            <caption>Search History</caption>
+            <colgroup>
+                <col span="1" class="tableColor">
+                <col span="10">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="1">ID#</th>
+                    <th rowspan="1">Superhost</th> 
+					<th rowspan="1">RoomType</th> 
+                    <th rowspan="1">Borough</th> 
+					<th rowspan="1">Max Capacity</th> 
+					<th rowspan="1"># of Bathrooms</th> 
+					<th rowspan="1"># of Bedrooms</th> 
+					<th rowspan="1">Avg. Price</th> 
+					<th rowspan="1">Avg. Rate Score</th> 
+					<th rowspan="1">Avg. Monthly Reviews</th> 
+					<th rowspan="1"># of Similar Airbnbs</th> 
+                </tr>
+            </thead>
+
+            <tbody id='t_body'>
+                <tr>
+                    <td>1</td>
+                    <td>Yes</td>
+					<td>Entire Home/Apt</td>
+                    <td>Brooklyn</td>
+                    <td>2</td>
+                    <td>1.0</td>
+                    <td>2</td>
+					<td>178.95</td>
+					<td>4.85</td>
+					<td>1.03</td>
+					<td>19</td>
+                </tr>
+            </tbody>
+           
+            <tfoot>
+                <tr>
+                    <td colspan="11">
+                        &copy; Whole Brain.
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+
+</body>
+</html>
