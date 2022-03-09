@@ -1,0 +1,148 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+fieldset {
+    border: 0;
+}
+
+body {
+    background-color: #f3e3c6;
+}
+
+input, select {
+    margin: 10px;
+    size:5px;
+}
+
+caption {
+    font-size: 20px;
+    margin: 10px;
+    font-weight: 900;
+}
+
+.button-success {
+    background: #FF5660;
+    /* this is a green */
+    color: #FFF6E6;
+    border-radius: 5px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.tableColor {
+    background-color: #FFF6E6;
+}
+
+table, th, td {
+    border: 0.5px solid black;
+    text-align: center;
+    width:85%;
+    padding: 2px;
+    table-layout: fixed;
+}
+
+#top {
+    background-image: url("../data/airbnb_fig2.jpeg");
+    padding-bottom: 50px;
+}
+
+#logo_title{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#logo {
+    max-width: 8%;  
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#wb_logo {
+    max-width: 4.5%;
+    margin-top: 15px;
+}
+
+#searchBar{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-basis: 80%;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#searchItem{
+    display: inline-block;
+    flex-basis: 80%;
+    text-align: center;
+}
+
+#searchTitle {
+    font-size: 18px;
+    font-weight: 900;
+    color: #FFF6E6;
+}
+
+
+#plots {
+    display:flex;
+    align-content: center;
+    align-items: center;
+    flex-basis: 80%;
+}
+
+#nyMap{
+    height: 55%;
+    width: 55%;
+
+}
+
+#scatterplot {
+    height: 100%;
+    width: 100%;
+    min-width: 520px;
+}
+
+#dashboard {
+    display:flex;
+    align-content: center;
+    align-items: center;
+    flex-basis: 10%;
+}
+
+#priceDashboard {
+    display: inline-block;
+    align-content: center;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#scoreDashboard{
+    display: inline-block;
+    align-content: center; 
+}
+
+#dbText{
+    font-weight: 900;
+}
+
+#avgPirce {
+    color: #FF5660;
+    margin-left: 12px;
+}
+
+#avgScore {
+    color: #FF5660;
+    margin-left: 65px;
+}
+
+#searchHistory{
+    margin-left: 200px;
+}
+
+
