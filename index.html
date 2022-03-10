@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>viz_project</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Paytone+One&display=swap" rel="stylesheet" />
 	<link href="./styles/dashboard.css" rel="stylesheet" />
@@ -81,22 +82,28 @@
 		</div>
 		
 	</div>
+	<div id="dashboard">
+		<div id="priceDashboard">
+			<h3 id="dbText">Avg. Price</h3>
+			<output id="avgPirce">$178.95</output>
+		</div>
+		<div id="scoreDashboard">
+			<h3 id="dbText">Avg. Rating</h3>
+			<output id="avgScore">4.85</output>
+		</div>
+		<div id="reviewDashboard">
+			<h3 id="dbText">Avg. Monthly Reviews</h3>
+			<output id="avgReview">1.03</output>
+		</div>
+		<div id="airbnbDashboard">
+			<h3 id="dbText">Number of Similar Airbnbs</h3>
+			<output id="numAirbnb">19</output>
+		</div>
+   </div>
 
 	<div id="plots">
 		<div id="nyMap"></div>
-		<div id="searchPlot">
-			<div id="dashboard">
-				<div id="priceDashboard">
-					<h3 id="dbText">Avg. Price</h3>
-					<output id="avgPirce">$178.95</output>
-				</div>
-				<div id="scoreDashboard">
-					<h3 id="dbText">Avg. Review Score</h3>
-					<output id="avgScore">4.85</output>
-				</div>
-			</div>
-			<div id="scatterplot"></div>
-		</div>
+		<div id="scatterplot"></div>
 	</div>
 	<hr>
     <div id="searchHistory">
@@ -116,7 +123,7 @@
 					<th rowspan="1"># of Bathrooms</th> 
 					<th rowspan="1"># of Bedrooms</th> 
 					<th rowspan="1">Avg. Price</th> 
-					<th rowspan="1">Avg. Rate Score</th> 
+					<th rowspan="1">Avg. Rating</th> 
 					<th rowspan="1">Avg. Monthly Reviews</th> 
 					<th rowspan="1"># of Similar Airbnbs</th> 
                 </tr>
@@ -141,14 +148,17 @@
             <tfoot>
                 <tr>
                     <td colspan="11">
-                        &copy; Whole Brain.
+                        &copy; Whole Brain Consulting 
                     </td>
                 </tr>
             </tfoot>
         </table>
     </div>
-
-
-
+	<hr>
+	<div id="bottom">
+		<img id="wb_logo" src='./data/whole_brain_logo.png' alt="logo">
+		<p>&copy; Whole Brain Consulting </p>
+	</div>
+	
 </body>
 </html>

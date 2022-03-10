@@ -34,11 +34,6 @@ function plotMap(area) {
 				options: {
 					name: 'usa_ny',
 					items: ['BR','NY','QU','KI','RI'],
-					plot: {
-						tooltip: {
-						  text: "%t"
-						}
-					},
 					zooming: false,
 					panning: false,
 					scrolling: false,
@@ -78,7 +73,9 @@ function plotMap(area) {
 	zingchart.loadModules('maps, maps-usa_ny', function (e) {
 		zingchart.render({
 			id: 'nyMap',
-			data: mapConfig
+			data: mapConfig,
+			height: 450,
+			width: "100%"
 		});
 	});
 }
@@ -116,7 +113,6 @@ function getInput(type) {
 		val = document.getElementById("bedroom").value
 		store["bedrooms"] = val
 	}
-	// checkOrder()
 }
 
 function updateKey() {
@@ -164,6 +160,8 @@ function updateTable(arr) {
 function updateDashboard(lst) {
 	select('avgPirce').innerHTML = '$' + lst[0];
 	select('avgScore').innerHTML = lst[1];
+	select('avgReview').innerHTML = lst[2];
+	select('numAirbnb').innerHTML = lst[3]
 }
 
 function plotScatter(price, score){
@@ -175,7 +173,7 @@ function plotScatter(price, score){
 		"type": "scatter",
 		backgroundColor:bgcolor,
 		"title": {
-			text: 'Relationship Between Price and Review Score'
+			text: 'Relationship Between Price and Rating'
 		},
 		'scale-x': {
 			label: {
@@ -199,8 +197,7 @@ function plotScatter(price, score){
 	zingchart.render({
 		id: 'scatterplot',
 		data: myConfig,
-		height: 400,
-		width: "100%"
+		height: 400
 	 });
 }
 
@@ -233,7 +230,12 @@ function searchResult() {
 		]
 		plotScatter(item['prices'], item['scores'])
 		updateTable(arr)
-		updateDashboard([Number(item["avg_price"]).toFixed(2),Number(item["avg_score"]).toFixed(2)])
+		updateDashboard([
+			Number(item["avg_price"]).toFixed(2),
+			Number(item["avg_score"]).toFixed(2),
+			Number(item["avg_num_reviews"]).toFixed(2),
+			Number(item["num_airbnb"])
+		])
 		
 	})
 }

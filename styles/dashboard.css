@@ -33,6 +33,10 @@ caption {
     background-color: #FFF6E6;
 }
 
+th {
+    background-color: #FFF6E6;
+}
+
 table, th, td {
     border: 0.5px solid black;
     text-align: center;
@@ -92,37 +96,54 @@ table, th, td {
 }
 
 #nyMap{
-    height: 55%;
-    width: 55%;
-
+    height: 100%;
+    width: 100%;
+    margin-top: 60px;
+    margin-right:60px;
 }
 
 #scatterplot {
     height: 100%;
     width: 100%;
-    min-width: 520px;
+    margin: 60px;
 }
 
 #dashboard {
     display:flex;
     align-content: center;
     align-items: center;
-    flex-basis: 10%;
+    flex-basis: 100%;
+    margin-left: 100px;
+    margin-right: 50px;
 }
 
 #priceDashboard {
     display: inline-block;
     align-content: center;
     align-items: center;
-    margin-left: 25px;
-    margin-right: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    flex-basis: 80%;
 }
 
 #scoreDashboard{
     display: inline-block;
+    align-content: center;
+    align-items: center;
+    flex-basis: 80%; 
+}
+
+#reviewDashboard {
+    display: inline-block;
     align-content: center; 
+    align-items: center;
+    flex-basis: 80%;
+
+}
+
+#airbnbDashboard {
+    display: inline-block;
+    align-content: center;
+    align-items: center;
+    flex-basis: 80%; 
 }
 
 #dbText{
@@ -132,11 +153,25 @@ table, th, td {
 #avgPirce {
     color: #FF5660;
     margin-left: 12px;
+    font-size: 18px;
 }
 
 #avgScore {
     color: #FF5660;
-    margin-left: 65px;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+#avgReview {
+    color: #FF5660;
+    margin-left: 90px;
+    font-size: 18px;
+}
+
+#numAirbnb {
+    color: #FF5660;
+    margin-left: 110px;
+    font-size: 18px;
 }
 
 #searchHistory{
@@ -150,6 +185,24 @@ table, th, td {
     background-color: rgba(119,77,44, 0.8);
     color: #fff;
     border-radius: 25px;
+}
+
+#wb_logo {
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-width: 3%;
+}
+
+#bottom {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    
+}
+
+.checked {
+    color: orange;
 }
 
 
