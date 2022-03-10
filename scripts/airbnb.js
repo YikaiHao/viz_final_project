@@ -171,6 +171,11 @@ function plotScatter(price, score){
 	}
 	var myConfig = {
 		"type": "scatter",
+		"plot": {
+			"tooltip": {
+			  "text": "Price: $%kt  Rating: %vt"
+			}
+		},
 		backgroundColor:bgcolor,
 		"title": {
 			text: 'Relationship Between Price and Rating'
