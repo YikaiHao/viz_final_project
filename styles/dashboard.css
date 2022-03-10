@@ -69,8 +69,6 @@ table, th, td {
     align-content: center;
     align-items: center;
     flex-basis: 80%;
-    margin-left: 80px;
-    margin-right: 80px;
 }
 
 #searchItem{
@@ -143,6 +141,15 @@ table, th, td {
 
 #searchHistory{
     margin-left: 200px;
+}
+
+.box1 {
+    width: 1300px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgba(119,77,44, 0.8);
+    color: #fff;
+    border-radius: 25px;
 }
 
 

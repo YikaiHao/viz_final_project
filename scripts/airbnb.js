@@ -34,6 +34,11 @@ function plotMap(area) {
 				options: {
 					name: 'usa_ny',
 					items: ['BR','NY','QU','KI','RI'],
+					plot: {
+						tooltip: {
+						  text: "%t"
+						}
+					},
 					zooming: false,
 					panning: false,
 					scrolling: false,
@@ -42,11 +47,11 @@ function plotMap(area) {
 							visible: false
 						},
 						items: {
-							BR:{label:{text:"Bronx"}, backgroundColor:light},
-							NY:{label:{text:"Manhattan"}, backgroundColor:light},
-							QU:{label:{text:"Queens"}, backgroundColor:light},
-							KI:{label:{text:"Brooklyn"}, backgroundColor:light},
-							RI:{label:{text:"Staten Island"}, backgroundColor:light}
+							BR:{label:{text:"Bronx"}, backgroundColor:light, tooltip:{text:"Bronx"}},
+							NY:{label:{text:"Manhattan"}, backgroundColor:light, tooltip:{text:"Manhattan"}},
+							QU:{label:{text:"Queens"}, backgroundColor:light, tooltip:{text:"Queens"}},
+							KI:{label:{text:"Brooklyn"}, backgroundColor:light,tooltip:{text:"Brooklyn"}},
+							RI:{label:{text:"Staten Island"}, backgroundColor:light, tooltip:{text:"Staten Island"}}
 						},
 						borderColor: dark
 					}

@@ -18,67 +18,70 @@
 		<div class='title'id="logo_title">
 			<img id="logo" src='./data/logo.png' alt="logo">
 		</div>
-	
-		<fieldset id="searchBar">
-			<div id="searchItem">
-				<div>
-					<label id="searchTitle">Superhost</label>
+
+		<div  class="box box1">
+			<fieldset id="searchBar">
+				<div id="searchItem">
+					<div>
+						<label id="searchTitle">Superhost</label>
+					</div>
+					<div>
+						<select id="superhost" onchange="getInput('superhost')">
+							<option value="Yes">Yes</option>
+							<option value="No">No</option>
+						</select>
+					</div>
+					
 				</div>
-				<div>
-					<select id="superhost" onchange="getInput('superhost')">
-						<option value="Yes">Yes</option>
-						<option value="No">No</option>
+				<div id="searchItem">
+					<label id="searchTitle">Room Type</label>
+					<select id="roomType" onchange="getInput('roomType')">
+						<option value="Entire Home/Apt">Entire Home/Apt</option>
+						<option value="Private Room">Private Room</option>
 					</select>
 				</div>
-				
-			</div>
-			<div id="searchItem">
-				<label id="searchTitle">Room Type</label>
-				<select id="roomType" onchange="getInput('roomType')">
-					<option value="Entire Home/Apt">Entire Home/Apt</option>
-					<option value="Private Room">Private Room</option>
-				</select>
-			</div>
-			<div id="searchItem">
-				<label id="searchTitle">Borough</label>
-				<select id="borough" onchange="getInput('borough')">
-					<option value="Brooklyn">Brooklyn</option>
-					<option value="Manhattan">Manhattan</option>
-					<option value="Queens">Queens</option>
-					<option value="Bronx">Bronx</option>
-					<option value="Staten Island">Staten Island</option>
-				</select>
-			</div>
-			<div id="searchItem">
-				<div>
-					<label id="searchTitle">Capacity</label>
+				<div id="searchItem">
+					<label id="searchTitle">Borough</label>
+					<select id="borough" onchange="getInput('borough')">
+						<option value="Brooklyn">Brooklyn</option>
+						<option value="Manhattan">Manhattan</option>
+						<option value="Queens">Queens</option>
+						<option value="Bronx">Bronx</option>
+						<option value="Staten Island">Staten Island</option>
+					</select>
 				</div>
-				<div>
-					<input id = "capacity" type="number" value="2" min="1" max="10" oninput="getInput('cap')">
+				<div id="searchItem">
+					<div>
+						<label id="searchTitle">Capacity</label>
+					</div>
+					<div>
+						<input id = "capacity" type="number" value="2" min="1" max="10" oninput="getInput('cap')">
+					</div>
 				</div>
-			</div>
-			<div id="searchItem">
-				<div>
-					<label id="searchTitle">Bathrooms</label>
+				<div id="searchItem">
+					<div>
+						<label id="searchTitle">Bathrooms</label>
+					</div>
+					<div>
+						<input id = "bathroom" type="number" value="1.0" min="1" max="4" step="0.5" oninput="getInput('bathroom')">	
+					</div>
 				</div>
-				<div>
-					<input id = "bathroom" type="number" value="1.0" min="1" max="4" step="0.5" oninput="getInput('bathroom')">	
+				<div id="searchItem">
+					<div>
+						<label id="searchTitle">Bedrooms</label>
+					</div>
+					<div>
+						<input id = "bedroom" type="number" value="2" min="1" max="6" oninput="getInput('bedroom')">
+					</div>
+				</div>	
+				<div id="searchItem">
+					<button type="button" id="check" class="button-success pure-button" onclick="searchResult()">Search</button>
 				</div>
-			</div>
-			<div id="searchItem">
-				<div>
-					<label id="searchTitle">Bedrooms</label>
-				</div>
-				<div>
-					<input id = "bedroom" type="number" value="2" min="1" max="6" oninput="getInput('bedroom')">
-				</div>
-			</div>	
-			<div id="searchItem">
-				<button type="button" id="check" class="button-success pure-button" onclick="searchResult()">Search</button>
-			</div>
-		</fieldset>
+			</fieldset>
+		</div>
+		
 	</div>
-	<hr>
+
 	<div id="plots">
 		<div id="nyMap"></div>
 		<div id="searchPlot">
